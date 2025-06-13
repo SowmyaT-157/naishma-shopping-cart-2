@@ -22,7 +22,7 @@ A command-line e-commerce application built using **TypeScript** and **Node.js**
 ##  Features
 
   - It is a command-line e-commerce application built using TypeScript and Node.js, designed to simulate basic Admin and Customer interactions in an e-commerce environment
-  
+  - Display product details with the help of public API url.  
 
 <!-- ###  Admin Role
 - Add new products with full details
