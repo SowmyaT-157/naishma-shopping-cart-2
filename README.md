@@ -37,10 +37,10 @@ A command-line e-commerce application built using **TypeScript** and **Node.js**
   - **Category**
   - **Maximum Price**
   - **Minimum Rating**
-<!-- - Add products to cart
-- View items in cart
-- Navigate back to role selection  -->
+- Add products to cart
 
+<!-- - View items in cart
+- Navigate back to role selection  --> 
 ---
 
 ##  Tech Stack
