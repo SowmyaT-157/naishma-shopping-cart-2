@@ -3,7 +3,7 @@ import promptSync from 'prompt-sync';
 import { Product } from '../../interface/productData';
 import { searchProducts } from '../searchProduct/searchProducts';
 import { filterPrice,filterCategory,filterRating } from '../filterProduct/filter';
-// import { addToCart, viewCart } from '../customerCart/cart';
+import { addToCart } from '../addToCart/cart';
 // import { UserRole } from '../main';
 
 const prompt = promptSync();
@@ -86,17 +86,18 @@ export function customerMenu(products: Product[]) {
         }
         break;
       }
+    
+  
+
+      case "3": {
+        const name = prompt("Enter product name to add to cart (or 'Back'): ").trim();
+        if (name.toLowerCase() === "back") break;
+
+        addToCart(products, name);
+        break;
+      }
     }
   }
-
-//       case "3": {
-//         const name = prompt("Enter product name to add to cart (or 'Back'): ").trim();
-//         if (name.toLowerCase() === "back") break;
-
-//         // addToCart(products, name);
-//         break;
-//       }
-
 //       case "4":
 //         // viewCart();
 //         break;
