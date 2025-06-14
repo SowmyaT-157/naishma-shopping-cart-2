@@ -1,7 +1,7 @@
 
 import promptSync from 'prompt-sync';
 import { Product } from '../interface/productData';
-// import { searchProducts } from '../searchProduct/search';
+import { searchProducts } from './searchProducts';
 // import { filterPrice, filterCategory, filterRating } from '../filterproduct/filter';
 // import { addToCart, viewCart } from '../customerCart/cart';
 // import { UserRole } from '../main';
@@ -29,17 +29,17 @@ export function customerMenu(products: Product[]) {
   
     const choice = prompt("Enter choice: ").trim();
 
-    // switch (choice) {
-    //   case "1": {
-    //     const keyword = prompt("Enter keyword (or 'Back'): ").trim();
-    //     if (keyword.toLowerCase() === "back") break;
+    switch (choice) {
+      case "1": {
+        const keyword = prompt("Enter keyword (or 'Back'): ").trim();
+        if (keyword.toLowerCase() === "back") break;
 
-        // const results = searchProducts(products, keyword);
-        // displayProducts(results);
+        const results = searchProducts(products, keyword);
+        displayProducts(results);
         break;
       }
 }
-  
+  }
 //       case "2": {
 //         // Filter submenu
 //         console.log("\n-- Filter Options --");
@@ -107,4 +107,4 @@ export function customerMenu(products: Product[]) {
 //         console.log("Invalid option.");
 //     }
 //   }
-
+}
