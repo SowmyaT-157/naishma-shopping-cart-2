@@ -49,7 +49,7 @@ function addProduct(): void {
   const rating = ratingStr ? { rate: parseFloat(ratingStr), count: 0 } : undefined;
 
   if (!title || isNaN(price)) {
-    console.log('1Invalid title or price.');
+    console.log('Invalid title or price.');
     return;
   }
   
