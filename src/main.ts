@@ -2,35 +2,12 @@ console.log("naishma cli application...")
 
 
 import { User } from "./enums/role";
-
-
-
-
-export function UserRole() {
-  console.log('\nSelect role:');
-  console.log('1. Admin');
-  console.log('2. Customer');
-
-  const input = prompt('Enter 1 or 2: ').trim();
-
-  if (input === User.Admin) {
-    console.log('You selected: Admin');
-    // adminMenu();
-  } else if (input === User.Customer) {
-    console.log('You selected: Customer');
-    // customerMenu(products);
-  } else {
-    console.log('Invalid selection');
-  }
-}
-UserRole()
-
-
-
 import axios from 'axios';
 import promptSync from 'prompt-sync';
 import { Product } from './interface/productData';
 const prompt = promptSync();
+
+
 
 export let products: Product[] = [];
 
@@ -64,10 +41,28 @@ export function printProducts(products: Product[]) {
   });
 }
 
+export function UserRole() {
+  console.log('\nSelect role:');
+  console.log('1. Admin');
+  console.log('2. Customer');
+
+  const input = prompt('Enter 1 or 2: ').trim();
+
+  if (input === User.Admin) {
+    console.log('You selected: Admin');
+    // adminMenu();
+  } else if (input === User.Customer) {
+    console.log('You selected: Customer');
+    // customerMenu(products);
+  } else {
+    console.log('Invalid selection');
+  }
+}
+
 
 async function main() {
   await fetchProducts();         
   printProducts(products);       
-                    
+  UserRole()                
 }
 main();
