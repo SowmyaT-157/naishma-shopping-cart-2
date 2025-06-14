@@ -1,7 +1,7 @@
 
 import promptSync from 'prompt-sync';
-import { Product } from '../interface/productData';
-import { searchProducts } from './searchProducts';
+import { Product } from '../../interface/productData';
+import { searchProducts } from '../searchProduct/searchProducts';
 // import { filterPrice, filterCategory, filterRating } from '../filterproduct/filter';
 // import { addToCart, viewCart } from '../customerCart/cart';
 // import { UserRole } from '../main';

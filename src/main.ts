@@ -5,7 +5,7 @@ import { User } from "./enums/role";
 import axios from 'axios';
 import promptSync from 'prompt-sync';
 import { Product } from './interface/productData';
-import { customerMenu } from "./customer/customerMenu";
+import { customerMenu } from "./customer/customerMenu/customerMenu";
 const prompt = promptSync();
 
 
