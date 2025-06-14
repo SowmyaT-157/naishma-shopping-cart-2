@@ -11,6 +11,7 @@ A command-line e-commerce application built using **TypeScript** and **Node.js**
 - [Naishma-2 CLI E-Commerce App](#naishma-2-cli-e-commerce-app)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
+    - [Admin Role](#admin-role)
   - [Tech Stack](#tech-stack)
   - [Installation \& setup](#installation--setup)
       - [clone:](#clone)
@@ -24,12 +25,15 @@ A command-line e-commerce application built using **TypeScript** and **Node.js**
   - It is a command-line e-commerce application built using TypeScript and Node.js, designed to simulate basic Admin and Customer interactions in an e-commerce environment
   - Display product details with the help of public API url.  
 
-<!-- ###  Admin Role
-- Add new products with full details
-- Remove existing products by ID or name
+###  Admin Role
+- Add a admin menu 
+- User can add new products with full details
+<!-- - Remove existing products by ID or name -->
 - Navigate back to role selection
+- when click 3 It will display all the products
+- Click 4 exot to the admin menu.
 
-###  Customer Role
+<!-- ###  Customer Role
 - View all available products
 - Search products by name
 - Filter products by:
