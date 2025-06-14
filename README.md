@@ -33,11 +33,11 @@ A command-line e-commerce application built using **TypeScript** and **Node.js**
 - View all available products
 - Add a customer Menu 
 - Search products by name
-<!-- - Filter products by:
+- Filter products by:
   - **Category**
   - **Maximum Price**
   - **Minimum Rating**
-- Add products to cart
+<!-- - Add products to cart
 - View items in cart
 - Navigate back to role selection  -->
 
