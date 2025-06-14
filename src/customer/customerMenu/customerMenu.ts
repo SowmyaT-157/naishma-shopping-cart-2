@@ -2,7 +2,7 @@
 import promptSync from 'prompt-sync';
 import { Product } from '../../interface/productData';
 import { searchProducts } from '../searchProduct/searchProducts';
-// import { filterPrice, filterCategory, filterRating } from '../filterproduct/filter';
+import { filterPrice,filterCategory,filterRating } from '../filterProduct/filter';
 // import { addToCart, viewCart } from '../customerCart/cart';
 // import { UserRole } from '../main';
 
@@ -38,54 +38,56 @@ export function customerMenu(products: Product[]) {
         displayProducts(results);
         break;
       }
-}
+
+  
+      case "2": {
+        // Filter submenu
+        console.log("\n-- Filter Options --");
+        console.log("1. By Category");
+        console.log("2. By Price");
+        console.log("3. By Rating");
+        console.log("4. Back");
+
+        const filterChoice = prompt("Choose filter: ").trim();
+
+        switch (filterChoice) {
+          case "1": {
+            const category = prompt("Enter category: ").trim();
+            const results = filterCategory(products, category);
+            displayProducts(results);
+            break;
+          }
+          case "2": {
+            const priceStr = prompt("Enter max price: ").trim();
+            const maxPrice = parseFloat(priceStr);
+            if (isNaN(maxPrice)) {
+              console.log("Invalid price.");
+              break;
+            }
+            const results = filterPrice(products, maxPrice);
+            displayProducts(results);
+            break;
+          }
+          case "3": {
+            const ratingStr = prompt("Enter minimum rating: ").trim();
+            const minRating = parseFloat(ratingStr);
+            if (isNaN(minRating)) {
+              console.log("Invalid rating.");
+              break;
+            }
+            const results = filterRating(products, minRating);
+            displayProducts(results);
+            break;
+          }
+          case "4":
+            break; // back to main menu
+          default:
+            console.log("Invalid filter option.");
+        }
+        break;
+      }
+    }
   }
-//       case "2": {
-//         // Filter submenu
-//         console.log("\n-- Filter Options --");
-//         console.log("1. By Category");
-//         console.log("2. By Price");
-//         console.log("3. By Rating");
-//         console.log("4. Back");
-
-//         const filterChoice = prompt("Choose filter: ").trim();
-
-//         switch (filterChoice) {
-//           case "1": {
-//             const category = prompt("Enter category: ").trim();
-//             const results = filterCategory(products, category);
-//             displayProducts(results);
-//             break;
-//           }
-//           case "2": {
-//             const priceStr = prompt("Enter max price: ").trim();
-//             const maxPrice = parseFloat(priceStr);
-//             if (isNaN(maxPrice)) {
-//               console.log("Invalid price.");
-//               break;
-//             }
-//             const results = filterPrice(products, maxPrice);
-//             displayProducts(results);
-//             break;
-//           }
-//           case "3": {
-//             const ratingStr = prompt("Enter minimum rating: ").trim();
-//             const minRating = parseFloat(ratingStr);
-//             if (isNaN(minRating)) {
-//               console.log("Invalid rating.");
-//               break;
-//             }
-//             const results = filterRating(products, minRating);
-//             displayProducts(results);
-//             break;
-//           }
-//           case "4":
-//             break; // back to main menu
-//           default:
-//             console.log("Invalid filter option.");
-//         }
-//         break;
-//       }
 
 //       case "3": {
 //         const name = prompt("Enter product name to add to cart (or 'Back'): ").trim();
