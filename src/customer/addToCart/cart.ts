@@ -17,15 +17,14 @@ export function addToCart(products: Product[], name: string): void {
   }
 }
 
-// // View Cart
-// export function viewCart(): void {
-//   if (cart.length === 0) {
-//     console.log("Cart is empty.");
-//     return;
-//   }
+export function viewCart(): void {
+  if (cart.length === 0) {
+    console.log("Cart is empty.");
+    return;
+  }
 
-//   console.log("\nYour Cart:");
-//   cart.forEach(p => {
-//     console.log(`- ${p.title} ($${p.price})`);
-//   });
-// }
+  console.log("\nYour Cart:");
+  cart.forEach(p => {
+    console.log(`- ${p.title} ($${p.price})`);
+  });
+}

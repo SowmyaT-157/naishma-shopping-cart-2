@@ -3,8 +3,8 @@ import promptSync from 'prompt-sync';
 import { Product } from '../../interface/productData';
 import { searchProducts } from '../searchProduct/searchProducts';
 import { filterPrice,filterCategory,filterRating } from '../filterProduct/filter';
-import { addToCart } from '../addToCart/cart';
-// import { UserRole } from '../main';
+import { addToCart,viewCart} from '../addToCart/cart';
+import { UserRole } from '../../main';
 
 const prompt = promptSync();
 
@@ -38,8 +38,6 @@ export function customerMenu(products: Product[]) {
         displayProducts(results);
         break;
       }
-
-  
       case "2": {
         // Filter submenu
         console.log("\n-- Filter Options --");
@@ -85,9 +83,9 @@ export function customerMenu(products: Product[]) {
             console.log("Invalid filter option.");
         }
         break;
-      }
+      
     
-  
+      }
 
       case "3": {
         const name = prompt("Enter product name to add to cart (or 'Back'): ").trim();
@@ -96,18 +94,18 @@ export function customerMenu(products: Product[]) {
         addToCart(products, name);
         break;
       }
-    }
-  }
-//       case "4":
-//         // viewCart();
-//         break;
+      case "4":
+        viewCart();
+        break;
 
-//       case "5":
-//         UserRole();
-//         return;  
+      case "5":
+        UserRole();
+        return;  
      
-//       default:
-//         console.log("Invalid option.");
-//     }
-//   }
-}
+      default:
+        console.log("Invalid option.");
+      }
+    }
+    }
+  
+  
