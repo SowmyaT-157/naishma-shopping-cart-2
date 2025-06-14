@@ -1,6 +1,6 @@
 console.log("naishma cli application...")
 
-
+import { adminMenu } from "./admin/addProduct";
 import { User } from "./enums/role";
 import axios from 'axios';
 import promptSync from 'prompt-sync';
@@ -50,7 +50,7 @@ export function UserRole() {
 
   if (input === User.Admin) {
     console.log('You selected: Admin');
-    // adminMenu();
+    adminMenu();
   } else if (input === User.Customer) {
     console.log('You selected: Customer');
     // customerMenu(products);
