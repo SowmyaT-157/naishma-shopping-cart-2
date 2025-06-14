@@ -1,5 +1,6 @@
 import { Product } from "../interface/productData";
 import { products,printProducts } from "../main"; 
+import { removeProduct } from "./removeProduct";
 import { UserRole } from "../main";
 
 import promptSync from 'prompt-sync';
@@ -20,7 +21,7 @@ export function adminMenu() {
     addProduct();
     adminMenu()
     } else if (choice === "2") {
-    //   removeProduct();
+      removeProduct();
       adminMenu();
     } else if (choice === "3") {
        printProducts(products);
@@ -68,36 +69,6 @@ function addProduct(): void {
   console.log(`Product "${title}" added successfully.`);
 }
 
-// function removeProduct(): void {
-//   console.log("Remove function ")
-//   if (products.length === 0) {
-//     console.log("No products to remove.");
-//     return;
-//   }
-
-//   console.log("\n--- Products Available for Removal ---");
-//   products.forEach((product, index) => {
-//     console.log(`${index + 1}. ID: ${product.id} | Title: ${product.title}`);
-//   });
-
-//   const input = prompt('Enter product ID or title to remove (or type "back" to cancel): ').trim();
-//   if (input.toLowerCase() === 'back') return;
-
-//   const isNumeric = !isNaN(Number(input));
-//   const identifier = isNumeric ? Number(input) : input.toLowerCase();
-
-//   const index = products.findIndex(p =>
-//     isNumeric ? p.id === identifier : p.title.toLowerCase() === identifier
-//   );
-
-  
 
 
-//   if (index !== -1) {
-//     const removed = products.splice(index, 1)[0];
-//     console.log(` Product "${removed.title}" removed.`);
-//     return
-//   } else {
-//     console.log(' Product not found.');
-//   }
-// }
+
