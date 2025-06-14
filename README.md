@@ -28,7 +28,7 @@ A command-line e-commerce application built using **TypeScript** and **Node.js**
 ###  Admin Role
 - Add a admin menu 
 - User can add new products with full details
-<!-- - Remove existing products by ID or name -->
+- Admin can Remove products.
 - Navigate back to role selection
 - when click 3 It will display all the products
 - Click 4 exot to the admin menu.
@@ -98,7 +98,6 @@ A command-line e-commerce application built using **TypeScript** and **Node.js**
 4.Push to the branch (git push origin feature-branch).
 
 5.Create a pull request.
-
 
 
 
