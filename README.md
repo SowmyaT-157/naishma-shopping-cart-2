@@ -12,6 +12,7 @@ A command-line e-commerce application built using **TypeScript** and **Node.js**
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
     - [Admin Role](#admin-role)
+    - [Customer Role](#customer-role)
   - [Tech Stack](#tech-stack)
   - [Installation \& setup](#installation--setup)
       - [clone:](#clone)
@@ -31,20 +32,21 @@ A command-line e-commerce application built using **TypeScript** and **Node.js**
 - Admin can Remove products.
 - Navigate back to role selection
 - when click 3 It will display all the products
-- Click 4 exot to the admin menu.
+- Click 4 exit to the admin menu.
 
-<!-- ###  Customer Role
+
+ ###  Customer Role
 - View all available products
+- Add a customer Menu 
 - Search products by name
 - Filter products by:
   - **Category**
   - **Maximum Price**
   - **Minimum Rating**
 - Add products to cart
-- View items in cart
-- Navigate back to role selection -->
 
-
+- View items in cart 
+- Navigate back to role selection  
 ---
 
 ##  Tech Stack
