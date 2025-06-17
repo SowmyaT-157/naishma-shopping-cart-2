@@ -27,26 +27,23 @@ A command-line e-commerce application built using **TypeScript** and **Node.js**
   - Display product details with the help of public API url.  
 
 ###  Admin Role
-- Add a admin menu 
-- User can add new products with full details
+- admin menu,when user choose admin role,it will display admin menu. 
+- User can add new products with full details.
+- User added product is appended to the existing productlist.
 - Admin can Remove products.
-- Navigate back to role selection
-- when click 3 It will display all the products
-- Click 4 exit to the admin menu.
-
-
+- The user can navigate back to role selection.
+  
  ###  Customer Role
 - View all available products
-- Add a customer Menu 
+- Customer Menu,It display the customer functionality list.
 - Search products by name
 - Filter products by:
   - **Category**
   - **Maximum Price**
   - **Minimum Rating**
-- Add products to cart
-
+- User can add a products to the cart
 - View items in cart 
-- Navigate back to role selection  
+- User can navigate back to role selection  
 ---
 
 ##  Tech Stack
@@ -72,6 +69,11 @@ A command-line e-commerce application built using **TypeScript** and **Node.js**
     - node -v
     - It will display the version of the node
 - To install dependencies 
+
+ ``` bash
+    npm install
+ ```
+- To install typescript package.
    
  ```　bash
     npm install -g typeScript
