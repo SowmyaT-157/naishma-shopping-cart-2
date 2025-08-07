@@ -5,7 +5,9 @@ pipeline{
     }
     stages{
         stage('checkout to main'){
-            checkout scmGit(branches: [[name: '*/main'], [name: '*/feature/customer-functionality']], extensions: [], userRemoteConfigs: [[credentialsId: 'GitHub-id', url: 'https://github.com/SowmyaT-157/naishma-shopping-cart-2.git']])
+            step{
+               checkout scmGit(branches: [[name: '*/main'], [name: '*/feature/customer-functionality']], extensions: [], userRemoteConfigs: [[credentialsId: 'GitHub-id', url: 'https://github.com/SowmyaT-157/naishma-shopping-cart-2.git']])
+            }
         }
         stage('build'){
             steps{
