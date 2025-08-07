@@ -83,8 +83,6 @@ export function customerMenu(products: Product[]) {
             console.log("Invalid filter option.");
         }
         break;
-      
-    
       }
 
       case "3": {

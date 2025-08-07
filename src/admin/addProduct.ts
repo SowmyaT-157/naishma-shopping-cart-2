@@ -33,8 +33,7 @@ export function adminMenu() {
     } else {
     console.log("Invalid option, try again.");
     }
-      } 
-
+} 
 
 
 // adminMenu();
