@@ -1,0 +1,23 @@
+name: naishma application
+
+on: push
+
+branches: main
+
+jobs:
+  job-one:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: setup version
+      - uses: actions/checkout@v3
+
+      - name: setup node environment
+      - uses: actions/setup-node@v3
+        with:
+            node-version: 'v22.14.0'
+
+      - name: install dependencies
+        run: npm install
+
+        
