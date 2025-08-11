@@ -13,6 +13,10 @@ jobs:
       - name: install dependencies
         run: npm install
 
+      - name: build the application
+        run: npm run build
+        
+
      
 
 
