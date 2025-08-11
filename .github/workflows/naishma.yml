@@ -1,0 +1,19 @@
+name: naishma application
+
+on: push
+
+jobs:
+  job-one:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout to scm
+        uses: actions/checkout@v3
+
+      - name: install dependencies
+        uses: npm install
+        
+
+   
+
+        
