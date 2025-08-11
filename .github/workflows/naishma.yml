@@ -19,7 +19,7 @@ jobs:
 
   job-two:
     runs-on: ubuntu-latest
-    needs: [job-one,job-two]
+    needs: [job-one,job-three]
     steps:
       - name: test the application
         run: npm test
