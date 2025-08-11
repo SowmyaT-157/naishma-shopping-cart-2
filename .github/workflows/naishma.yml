@@ -18,13 +18,16 @@ jobs:
 
       - name: test the application
         run: npm test
-   
-  job-two:
-    runs-on: ubuntu-latest
+  job_two:
     needs: job-one
+    runs-on: ubuntu-latest
     steps:
-      - name: check the test coverage
+      - name: Run test coverage
         run: npm run test:coverage
+
+
+
+
       
 
      
