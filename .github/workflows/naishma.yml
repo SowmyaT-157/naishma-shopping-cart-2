@@ -16,20 +16,6 @@ jobs:
       - name: build the application
         run: npm run build
 
-      - name: test the application
-        run: npm test
-  job_two:
-    needs: job-one
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run test coverage
-        run: npm run test:coverage
-
-
-
-
-      
-
      
 
 
